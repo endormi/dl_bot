@@ -1,6 +1,6 @@
 # dl_bot
 
-Deep learning chatbot
+Deep learning chatbot (Using **Python 3.6.1**)
 
 Needed libraries:
 
