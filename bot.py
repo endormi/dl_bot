@@ -103,8 +103,6 @@ net_neuron = tflearn.fully_connected(net_neuron, 8)
 # Allow to get probabilities for each neuron in layer
 net_neuron = tflearn.fully_connected(net_neuron, len(output[0]), activation="softmax")
 net_neuron = tflearn.regression(net_neuron)
-
-
 model_layer = tflearn.DNN(net_neuron)
 
 
@@ -136,10 +134,10 @@ def words_list(s, words):
 
 # Ask user for a sentence
 def chat_with_bot():
-    print("Start talking with the chatbot (type stop to stop talking)!")
+    print("Start talking with the chatbot (type close to close the chat)!")
     while True:
         add_input = input("You: ")
-        if add_input.lower() == "stop":
+        if add_input.lower() == "close":
             break
         result = model_layer.predict([words_list(add_input, words)])
         # Index of the greatest value in list
@@ -147,9 +145,9 @@ def chat_with_bot():
         tag = labels[result_index]
         
 
-        for ans in messages["message"]:
-            if ans["tag"] == tag:
-                responses = ans["responses"]
+        for answer in messages["message"]:
+            if answer["tag"] == tag:
+                responses = answer["responses"]
         print(random.choice(responses))
 
 chat_with_bot()
