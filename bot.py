@@ -27,7 +27,8 @@ except:
     words = []
     labels = []
     doc = []
-    diff_doc = []
+    diff = []
+    
 
     # Loop through dictionaries in data
     for message in messages["message"]:
@@ -40,7 +41,7 @@ except:
             many_words = nltk.word_tokenize(pat)
             words.extend(many_words)
             doc.append(many_words)
-            diff_doc.append(message["tag"])
+            diff.append(message["tag"])
 
             if message["tag"] not in labels:
                 labels.append(message["tag"])
@@ -61,7 +62,7 @@ except:
     """
     train = []
     output = []
-    out_empty = [0 for _ in range(len(labels))]
+    empty__output = [0 for _ in range(len(labels))]
 
 
     for x, res in enumerate(doc):
@@ -79,11 +80,11 @@ except:
                 list_of_words.append(0)
 
         # See where "tag" is and set value to 1
-        output_row = out_empty[:]
-        output_row[labels.index(diff_doc[x])] = 1
+        row = empty__output[:]
+        row[labels.index(diff[x])] = 1
 
         train.append(list_of_words)
-        output.append(output_row)
+        output.append(row)
 
     train = numpy.array(train)
     output = numpy.array(output)
@@ -117,10 +118,10 @@ except:
 def words_list(s, words):
     list_of_words = [0 for _ in range(len(words))]
 
-    each_words = nltk.word_tokenize(s)
-    each_words = [stem.stem(many_words.lower()) for many_words in each_words]
+    each_word = nltk.word_tokenize(s)
+    each_word = [stem.stem(many_words.lower()) for many_words in each_word]
 
-    for r in each_words:
+    for r in each_word:
         for i, w in enumerate(words):
             """
             If current word in list is equal to word 
