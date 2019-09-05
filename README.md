@@ -4,6 +4,8 @@
 
 > Newer versions of python might not work.
 
+[inspiration](https://www.youtube.com/watch?v=wypVcNIH6D4)
+
 Deep learning chatbot.
 
 Install requirements:
