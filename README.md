@@ -27,23 +27,4 @@ The bots answers are based on `data.json`, which has different patterns.
 
 I have included five tags "greetings", "goodbye", "age", "name" and "robot".
 
-Talking with the bot:
-
-```
-"greetings":
-"Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"
-
-"goodbye":
-"cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "quit", "bye"
-
-"age":
-"how old", "what is your age", "how old are you", "age?"
-
-"name":
-"what is your name", "what should I call you", "whats your name?"
-
-"robot":
-"bot", "do robot stuff", "robot"
-```
-
 Be sure to test this out!
