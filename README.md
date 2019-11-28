@@ -1,6 +1,4 @@
-# dl_bot
-
-[![Python Version](https://img.shields.io/badge/python-3.6.1-brightgreen.svg?)](https://www.python.org/downloads/)
+# dl_bot [![Python Version](https://img.shields.io/badge/python-3.6.1-brightgreen.svg?)](https://www.python.org/downloads/)
 
 > Newer versions of python might not work.
 
@@ -25,6 +23,6 @@ Go to **Python shell** and type:
 
 The bots answers are based on `data.json`, which has different patterns.
 
-I have included five tags "greetings", "goodbye", "age", "name" and "robot".
+I have included five tags `"greetings"`, `"goodbye"`, `"age"`, `"name"` and `"robot"`.
 
 Be sure to test this out!
